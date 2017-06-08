@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Loop</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- <style type="text/css">
+		#blue{
+			background: blue;
+			height: 100px;
+			width: 100px;
+			float: left;
+
+			
+		}
+
+		#red{
+			background: red;
+			height: 100px;
+			width: 100px;
+			float: left;
+		}
+
+
+
+
+	</style> -->
+</head>
+<body>
+
+<!-- <input type="text" id="input">
+<button id="loop">Loop</button>
+<button id="gen">Generate</button>
+<h3 id="greet"></h3>
+ -->
+
+
+
+<h3 id="text1"></h3>
+<h3 id="text2"></h3>
+<div type="text" id="answer"></div>
+<button id="btn">Start</button>
+
+
+
+
+
+<script type="text/javascript">
+
+	// document.getElementById('loop').onclick = function()
+	// {
+	// 	var input = parseInt(document.getElementById('input').value);
+
+	// 	for(x=0;x<=input;x++)
+	// 	{
+	// 		for(y=0;y<=input;y++)
+	// 		{
+	// 			if(input%2==0)
+				
+	// 				document.getElementById('greet').innerHTML += '<div class=blue></div>';
+	// 			else
+	// 				document.getElementById('greet').innerHTML += '<div class=red></div>';
+	// 		}
+	// 	}
+	// }
+
+
+	// document.getElementById('loop').onclick = function()
+	// {
+	// 	var input = parseInt(document.getElementById('input').value);
+	
+		
+	// 	for(x=0;x<input;x++)
+	// 	{
+	// 		for(y=0;y<input;y++)
+	// 		{
+	// 			if ((x+y) % 2 == 0)
+	// 				document.getElementById('greet').innerHTML += '<div id="blue"></div>';
+	// 			else
+	// 				document.getElementById('greet').innerHTML += '<div id="red"></div>';
+	// 		}	
+	// 	}
+	// 	document.getElementById('greet').innerHTML += '<div class="clear"></div>';
+	// }
+
+	// document.getElementById('gen').onclick = function()
+	// {
+	// 	var number = Math.floor((Math.random() * 55) + 1);
+
+	// 	for (y=0;y<=6;y++)
+	// 	{	
+	// 		document.getElementById('greet').innerHTML = number;
+	// 	}
+	// }
+
+		var questions = [
+			'Question #1', 
+			'Question #2', 
+			'Question #3',
+			'Question #4',
+			'Question #5',
+		];
+
+		var answers = [
+			'a', 
+			'b', 
+			'c',
+			'd',
+			'e',
+		];
+
+		var score = 0;
+		var count = 0;
+
+
+	document.getElementById('btn').onclick = function() 
+	{
+			document.getElementById('text1').innerHTML = questions[count];
+			document.getElementById('text2').innerHTML = answers[count];
+			var input = document.getElementById('answer').innerHTML = "<input type='text' id='answer'>";
+			document.getElementById('btn').innerHTML = "Next";
+
+			
+
+			if(input == answers[count]){
+				alert("Correct!");
+				score++;
+			}
+			else{
+				alert("Incorrect!");
+			}
+			count++;
+ 
+			if (count >= questions.length)
+			{
+				alert (score);
+			}
+
+
+
+		// if(count < 5){
+		// 	document.getElementById('text').innerHTML + questions[0];
+		// 	document.getElementById('btn').innerHTML = "Next";
+		// 	count++;
+		// }else if(count < 5)
+		// 	document.getElementById('text').innerHTML + questions[1];
+		// 	document.getElementById('btn').innerHTML = "Next";
+		// 	count++;
+		// }
+	}
+
+
+</script>
+
+</body>
+</html>
